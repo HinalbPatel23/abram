@@ -350,6 +350,7 @@ classdef render
 
         function obj = getParPool(obj)
             if obj.update_parpool || ~obj.smart_calling
+				parpool("threads");
                 obj.setting = abram.render.getParPool(obj.setting);
             else
                 fprintf('\n   smart calling: no change detected, skipping parpool loading...') 
