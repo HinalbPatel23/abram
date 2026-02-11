@@ -43,7 +43,7 @@ if isfile("abram_install.m")
     movefile('abram_home.m',user_path)
 end
 
-% Path
+(* % Path
 addpath(genpath(abram_home()))
 if ~isfile(fullfile(abram_home(), "abram_install.m"))
     error('The registered abram path is wrong. Please run again abram_install() from ABRAM main directory')
@@ -54,7 +54,7 @@ if isempty(which('cvt_home.m'))
     error('CVT submodule not found. Please install CVT using git submodule or download it from https://github.com/andrepiz/cvt')
 else
     addpath(genpath(cvt_home()))
-end
+end *)
 
 % Remove debug folder from path if it exists
 debug_path = fullfile(abram_home(), 'debug');
